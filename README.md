@@ -1,9 +1,11 @@
-[![discord](https://discordapp.com/api/guilds/452233740408717313/widget.png?style=shield)][1]
-[![license](https://img.shields.io/badge/license-BSD%203--Clause-blue.svg)][2]
-[![release](https://gitlab.com/9developers/template/-/badges/release.svg)][3]
-[![pipeline](https://gitlab.com/9developers/template//badges/main/pipeline.svg)][4]
-
 # Template
+
+[![Discord](https://img.shields.io/discord/452233740408717313?color=738ADB&label=discord&logo=discord)][1]
+[![License](https://img.shields.io/badge/license-BSD%203--Clause-blue.svg)][2]
+[![Release](https://img.shields.io/gitlab/v/release/9developers/template)][3]
+[![Pipeline](https://img.shields.io/gitlab/pipeline-status/9developers/template)][4]
+
+9 Developers project template.
 
 [1]: https://discord.gg/KTgshSbEUU
 [2]: https://opensource.org/license/bsd-3-clause

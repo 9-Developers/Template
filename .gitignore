@@ -42,6 +42,9 @@ bin/
 /nbdist/
 /.nb-gradle/
 
+# Sublime workspace
+*.sublime-workspace
+
 # VS Code
 .vscode
 

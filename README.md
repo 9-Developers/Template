@@ -8,4 +8,4 @@
 
 [1]: https://discord.gg/KTgshSbEUU
 [2]: https://opensource.org/license/bsd-3-clause
-[3]: https://codeberg.org/9-Developers/Template/-/releases
+[3]: https://codeberg.org/9-Developers/Template/releases

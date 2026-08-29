@@ -28,23 +28,22 @@ for all involved. The community looks forward to your contributions. 🎉
 - [Suggesting Enhancements](#suggesting-enhancements)
 - [Your First Code Contribution](#your-first-code-contribution)
 - [Improving The Documentation](#improving-the-documentation)
-- [Styleguides](#styleguides)
+- [Style Guides](#style-guides)
 - [Commit Messages](#commit-messages)
-- [Join The Project Team](#join-the-project-team)
 
 ## Code of Conduct
 
 This project and everyone participating in it is governed by the
-[Code of Conduct](CODE_OF_CONDUCT.md).
+[Code of Conduct][1].
 By participating, you are expected to uphold this code.
 Please report unacceptable behavior to <community@9dev.tech>.
 
 ## I Have a Question
 
 > If you want to ask a question, we assume that you have read the available
-> [Documentation]().
+> [Documentation][2].
 
-Before you ask a question, it is best to search for existing [Issues](/issues)
+Before you ask a question, it is best to search for existing [Issues][3]
 that might help you. In case you have found a suitable issue and still need
 clarification, you can write your question in this issue.
 It is also advisable to search the internet for answers first.
@@ -52,7 +51,7 @@ It is also advisable to search the internet for answers first.
 If you then still feel the need to ask a question and need clarification, we
 recommend the following:
 
-- Open an [Issue](/issues/new).
+- Open an [Issue][4].
 - Provide as much context as you can about what you're running into.
 - Provide project and platform versions (nodejs, npm, etc), depending on what
   seems relevant.
@@ -81,12 +80,12 @@ as fast as possible.
 - Make sure that you are using the latest version.
 - Determine if your bug is really a bug and not an error on your side
   e.g. using incompatible environment components/versions
-  (Make sure that you have read the [documentation]().
+  (Make sure that you have read the [documentation][2].
   If you are looking for support, you might want to check
   [this section](#i-have-a-question)).
 - To see if other users have experienced (and potentially already solved) the
   same issue you are having, check if there is not already a bug report existing
-  for your bug or error in the [bug tracker](issues?q=label%3Abug).
+  for your bug or error in the [bug tracker][5].
 - Also make sure to search the internet (including Stack Overflow) to see if
   users outside of the GitHub community have discussed the issue.
 - Collect information about the bug:
@@ -104,10 +103,10 @@ as fast as possible.
 > including sensitive information to the issue tracker, or elsewhere in public.
 > Instead sensitive bugs must be sent by email to <security@9dev.tech>.
 
-We use GitLab issues to track bugs and errors. If you run into an issue with the
+We use GitHub issues to track bugs and errors. If you run into an issue with the
 project:
 
-- Open an [Issue](/issues/new).
+- Open an [Issue][4].
   (Since we can't be sure at this point whether it is a bug or not, we ask you
   not to talk about a bug yet and not to label the issue.)
 - Explain the behavior you would expect and the actual behavior.
@@ -140,9 +139,9 @@ your suggestion and find related suggestions.
 #### Before Submitting an Enhancement
 
 - Make sure that you are using the latest version.
-- Read the [documentation]() carefully and find out if the functionality is
+- Read the [documentation][2] carefully and find out if the functionality is
   already covered, maybe by an individual configuration.
-- Perform a [search](/issues) to see if the enhancement has already been
+- Perform a [search][3] to see if the enhancement has already been
   suggested. If it has, add a comment to the existing issue instead of opening a
   new one.
 - Find out whether your idea fits with the scope and aims of the project.
@@ -153,7 +152,7 @@ your suggestion and find related suggestions.
 
 #### How Do I Submit a Good Enhancement Suggestion?
 
-Enhancement suggestions are tracked as [GitLab issues](/issues).
+Enhancement suggestions are tracked as [GitHub issues][3].
 
 - Use a **clear and descriptive title** for the issue to identify the
   suggestion.
@@ -164,9 +163,8 @@ Enhancement suggestions are tracked as [GitLab issues](/issues).
   not work for you.
 - You may want to **include screenshots and animated GIFs** which help you
   demonstrate the steps or point out the part which the suggestion is related
-  to. You can use [this tool](https://www.cockos.com/licecap/) to record GIFs on
-  macOS and Windows, and [this tool](https://github.com/colinkeenan/silentcast) or
-  [this tool](https://github.com/GNOME/byzanz) on Linux.
+  to. You can use [this tool][6] to record GIFs on macOS and Windows, and
+  [this tool][7] on Linux.
 - **Explain why this enhancement would be useful** to most Template users.
   You may also want to point out the other projects that solved it better and
   which could serve as inspiration.
@@ -177,13 +175,24 @@ Enhancement suggestions are tracked as [GitLab issues](/issues).
 
 ## Style Guides
 
+Follow the automated formatting and linting rules configured for this project.
+When no explicit rule applies, match the style of the surrounding code.
+Document any project-specific conventions in this section.
+
 ### Commit Messages
 
-Template uses [Semantic commit messages][1].
+Template uses [Semantic commit messages][8].
 
 ## Attribution
 
-This guide is based on the **contributing.md**.
-[Make your own](https://contributing.md/)!
+This guide is based on the **contributing.md**. [Make your own][9]!
 
-[1]: https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716
+[1]: CODE_OF_CONDUCT.md
+[2]: docs/README.md
+[3]: https://github.com/9-Developers/Template/issues
+[4]: https://github.com/9-Developers/Template/issues/new
+[5]: https://github.com/9-Developers/Template/issues?q=label%3Abug
+[6]: https://www.cockos.com/licecap/
+[7]: https://github.com/colinkeenan/silentcast
+[8]: https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716
+[9]: https://contributing.md/

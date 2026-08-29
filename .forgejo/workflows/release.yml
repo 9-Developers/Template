@@ -1,0 +1,58 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  validate:
+    name: Validate release
+    runs-on: ci-node-24
+    timeout-minutes: 5
+    steps:
+      - name: Check out repository
+        uses: https://data.forgejo.org/actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+          ref: ${{ forgejo.sha }}
+
+      - name: Validate release tag
+        run: |
+          if [[ ! "$FORGEJO_REF_NAME" =~ ^v(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$ ]]; then
+            echo "Invalid release tag: $FORGEJO_REF_NAME"
+            exit 1
+          fi
+
+      - name: Verify release is on main
+        run: |
+          if ! git merge-base --is-ancestor "$FORGEJO_SHA" origin/main; then
+            echo "Tagged commit is not an ancestor of main: $FORGEJO_SHA"
+            exit 1
+          fi
+
+  build:
+    needs: validate
+    uses: ./.forgejo/workflows/build.yml
+
+  security:
+    needs: validate
+    uses: ./.forgejo/workflows/security.yml
+    secrets:
+      SOCKET_SECURITY_API_KEY: ${{ secrets.SOCKET_SECURITY_API_KEY }}
+
+  release:
+    name: Create release
+    needs: validate
+    runs-on: ci-node-24
+    timeout-minutes: 5
+    steps:
+      - name: Create release
+        uses: https://code.forgejo.org/actions/forgejo-release@98265452477dafb3f0f27ba9c462c90b18cb44fd # v2.13.4
+        with:
+          direction: upload
+          tag: ${{ forgejo.ref_name }}
+          token: ${{ forgejo.token }}
+          skip-assets: true
+          hide-archive-link: true

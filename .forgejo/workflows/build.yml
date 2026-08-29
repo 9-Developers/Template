@@ -9,8 +9,8 @@ on:
 
 jobs:
   rust:
-    name: Rust build
-    runs-on: ci-rust
+    name: Build
+    runs-on: ci-node-24
     timeout-minutes: 20
     steps:
       - name: Check out repository
@@ -20,4 +20,4 @@ jobs:
           ref: ${{ forgejo.sha }}
 
       - name: Build
-        run: cargo build --locked
+        run: zip template.zip ${{ forgejo.workspace }}

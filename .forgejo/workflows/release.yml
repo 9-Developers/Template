@@ -48,6 +48,11 @@ jobs:
     runs-on: node-24
     timeout-minutes: 5
     steps:
+      - name: Install release prerequisites
+        run: |
+          apt-get -o APT::Cache-Start=67108864 update
+          apt-get -o APT::Cache-Start=67108864 install --no-install-recommends --yes jq
+
       - name: Create release
         uses: https://code.forgejo.org/actions/forgejo-release@98265452477dafb3f0f27ba9c462c90b18cb44fd # v2.13.4
         with:

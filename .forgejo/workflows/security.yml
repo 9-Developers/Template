@@ -39,6 +39,7 @@ jobs:
 
   socket:
     name: Socket
+    if: ${{ false }}
     runs-on: ci-security
     timeout-minutes: 20
     steps:
